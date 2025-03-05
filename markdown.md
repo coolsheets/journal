@@ -24,7 +24,7 @@ addButtonToPage('Get name for age', () => {
 ---
 [lookee here...](http://127.0.0.1:5500/index.html)
 
-![Jabberwocky NOT WORKING](../../assests/Jabberwocky_250108.1.png)
+![Jabberwocky NOT WORKING](Jabberwocky_250108.1.png)
 
 | AssetID | Description | Scope |
 |-------------|------------|-----------|
