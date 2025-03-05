@@ -31,11 +31,11 @@ addButtonToPage('Get name for age', () => {
 | ID | What is this? | How does it interact? |
 | doors.js | Cabinet door decision | 
 
-...
+```
 {"name": "mike",
 "age": 62"
 }
-...
+```
 
 I have a citation for this. [^1]
 
