@@ -54,11 +54,11 @@ term
 
  What gives?! :joy:
 
- What is this ==NOT== working?
+ What is this <mark>NOT</mark> working?
 
- H-2-O
+ H<sub>2</sub>O
 
- X^2^
+ X<sup>2</sup>
 
 ```mermaid
 graph TD;
