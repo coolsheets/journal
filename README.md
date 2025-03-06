@@ -1,5 +1,10 @@
 # journal
 ## Developer journey
+## [250306]
+---
+Learned how to structure JSON today.  Decided to build a mGeo project JSON.
+
+<b>STUCK</b>: Need oauth client id and secret to access Google drive.
 
 ## [250305]
 ---
