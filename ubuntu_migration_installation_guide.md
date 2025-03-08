@@ -1,4 +1,5 @@
-# 🚀 Ubuntu Migration & Installation Guide (LVM + External Backup)
+# 🚀 Ubuntu Migration & Installation Guide
+(LVM + External Backup)
 ---
 ## <b>Author: @coolsheets</b>
 
