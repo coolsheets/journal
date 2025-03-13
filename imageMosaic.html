@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mosaic Mind Expansion</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+        }
+        canvas {
+            border: 2px solid white;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="mosaicCanvas"></canvas>
+    
+    <script>
+        const canvas = document.getElementById("mosaicCanvas");
+        const ctx = canvas.getContext("2d");
+        const img = new Image();
+        img.src = "your-image.jpg"; // Replace with the actual image path
+
+        let pixelSize = 1;
+        const maxPixelSize = 40;
+        const expansionSpeed = 0.5; 
+
+        img.onload = function() {
+            canvas.width = img.width;
+            canvas.height = img.height;
+            animateMosaic();
+        };
+
+        function drawMosaic(pixelSize) {
+            const w = canvas.width;
+            const h = canvas.height;
+            ctx.drawImage(img, 0, 0, w, h);
+            
+            const imageData = ctx.getImageData(0, 0, w, h);
+            ctx.clearRect(0, 0, w, h);
+            
+            for (let y = 0; y < h; y += pixelSize) {
+                for (let x = 0; x < w; x += pixelSize) {
+                    const index = (y * w + x) * 4;
+                    const r = imageData.data[index];
+                    const g = imageData.data[index + 1];
+                    const b = imageData.data[index + 2];
+                    ctx.fillStyle = `rgb(${r}, ${g}, ${b})`;
+                    ctx.fillRect(x, y, pixelSize, pixelSize);
+                }
+            }
+        }
+
+        function animateMosaic() {
+            pixelSize += expansionSpeed;
+            if (pixelSize > maxPixelSize) return;
+            drawMosaic(pixelSize);
+            requestAnimationFrame(animateMosaic);
+        }
+    </script>
+</body>
+</html>
